@@ -20,6 +20,8 @@ That is all. The tool installs everything else automatically on first run.
 
 Open a Terminal and navigate to the folder containing `run_alphagenome.sh` and `alphagenome_pipeline.py`.
 
+Then run `chmod +x run_alphagenome.sh` to be able to run this script.
+
 The first time you run the tool it will install a small package manager called `uv` and all required software. This takes about 2–5 minutes and only happens once.
 
 ---
