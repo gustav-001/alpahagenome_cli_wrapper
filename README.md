@@ -32,7 +32,7 @@ Create a spreadsheet in Excel or a plain text file (.csv) with the following col
 
 | Column | Required | Description |
 |---|---|---|
-| ID | Yes | A unique name for the variant (e.g. `rs80356730` or `TARDBP_M337V`) |
+| ID | Yes | A unique name for the variant (e.g. `sample_1` or `FOXL_s_1`) |
 | CHROM | Yes | Chromosome (e.g. `chr1`) |
 | POS | Yes | Genomic position of the variant (number) |
 | REF | Yes* | Reference base(s). Leave empty for deletions |
@@ -43,8 +43,8 @@ Create a spreadsheet in Excel or a plain text file (.csv) with the following col
 | WINDOW_BP | No | Width of the plot window in base pairs. Default: 24000 |
 | CENTRE_POS | No | Centre position for the plot — must be an actual genomic coordinate on the same chromosome (e.g. `11010000`), **not** a window size. Default: variant position |
 | Phenotype | No | Clinical phenotype label (e.g. `ALS`) |
-| cDNA | No | cDNA notation (e.g. `c.1009A>G`) |
-| HGVS | No | Protein change notation (e.g. `p.(Met337Val)`) |
+| cDNA | No | cDNA notation (e.g. `c.1111A>G`) |
+| HGVS | No | Protein change notation (e.g. `p.(Met222Tyr)`) |
 
 *For deletions, leave REF and ALT empty and fill in `deletion_length` instead.
 
@@ -160,7 +160,7 @@ Each row in a `scores.tsv` file is one prediction for one variant against one ou
 
 | Column | Meaning |
 |---|---|
-| variant_id | The variant, e.g. `chr1:11022418:A>G` |
+| variant_id | The variant, e.g. `chr1:11011000:A>G` |
 | scored_interval | The genomic region that was scored |
 | gene_name | Gene the score relates to (for gene-based scores), e.g. `TARDBP` |
 | gene_strand | Strand of that gene (`+` or `-`) |
@@ -190,7 +190,7 @@ To see all available terms for your organism, run:
 
 This writes a file called `available_ontologies_human.tsv` (or `_mouse.tsv`) that you can open in Excel. Pick the rows relevant to your tissue of interest and copy the `ontology_curie` values (e.g. `UBERON:0000955`) into a plain text file, one per line. Then pass that file with `--ontology-terms`.
 
-Alternatively you can go to https://www.alphagenomedocs.com/colabs/tissue_ontology_mapping.html run it in google colab (space ship icon top right).
+Alternatively you can go to https://www.alphagenomedocs.com/colabs/tissue_ontology_mapping.html, run it in google colab (space ship icon top right) to view and filter ontology terms.
 
 
 ### Example ontology terms file (`my_terms.txt`)
