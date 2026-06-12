@@ -52,8 +52,9 @@ Create a spreadsheet in Excel or a plain text file (.csv) with the following col
 
 ```
 ID,CHROM,POS,REF,ALT,Gene,Phenotype,cDNA,HGVS
-rs80356730,chr1,11022418,A,G,TARDBP,ALS,c.1009A>G,p.(Met337Val)
-W385Ifs10,chr1,11022560,,,TARDBP,Myopathy,c.1152_1162del,p.(Trp385IlefsTer10)
+sample_1,chr1,169549811,G,AAAA,F5,Thrombophilia,c.1601G>A,p.(Arg534Gln)
+sample_2,chr6,26092913,G,A,HFE,Hereditary hemochromatosis,c.845G>A,p.(Cys282Tyr)
+sample_3,chr1,11796321,G,,MTHFR,Hyperhomocysteinemia,c.665C>T,p.(Ala222Val)
 ```
 
 ---
@@ -188,6 +189,9 @@ To see all available terms for your organism, run:
 ```
 
 This writes a file called `available_ontologies_human.tsv` (or `_mouse.tsv`) that you can open in Excel. Pick the rows relevant to your tissue of interest and copy the `ontology_curie` values (e.g. `UBERON:0000955`) into a plain text file, one per line. Then pass that file with `--ontology-terms`.
+
+Alternatively you can go to https://www.alphagenomedocs.com/colabs/tissue_ontology_mapping.html run it in google colab (space ship icon top right).
+
 
 ### Example ontology terms file (`my_terms.txt`)
 
